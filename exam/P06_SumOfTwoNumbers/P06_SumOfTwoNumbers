@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class P06_SumOfTwoNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int start = Integer.parseInt(scanner.nextLine());
+        int end = Integer.parseInt(scanner.nextLine());
+        int magic = Integer.parseInt(scanner.nextLine());
+
+        int combinationCount = 0;
+
+        for (int i = start; i <= end; i++) {
+            for (int j = start; j <= end; j++) {
+                combinationCount++;
+                if (i + j == magic) {
+                    System.out.printf("Combination N:%d (%d + %d = %d)",
+                            combinationCount, i, j, magic);
+                    return;
+                }
+            }
+        }
+        System.out.printf("%d combinations - neither equals %d",
+                combinationCount, magic);
+    }
+}
