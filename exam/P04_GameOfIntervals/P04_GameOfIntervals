@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class P04_GameOfIntervals {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = Integer.parseInt(scanner.nextLine());
+        int from0to9 = 0;
+        int from10to19 = 0;
+        int from20to29 = 0;
+        int from30to39 = 0;
+        int from40to50 = 0;
+        int invalid = 0;
+        double score = 0;
+
+
+        for (int i = 0; i < n; i++) {
+            int num = Integer.parseInt(scanner.nextLine());
+
+            if (num >= 0 && num < 10) {
+                score += num * 0.2;
+                from0to9++;
+            } else if (num >= 10 && num < 20) {
+                score += num * 0.3;
+                from10to19++;
+            } else if (num >= 20 && num < 30) {
+                score += num * 0.4;
+                from20to29++;
+            } else if (num >= 30 && num < 40) {
+                score += 50;
+                from30to39++;
+            } else if (num >= 40 && num <= 50) {
+                score += 100;
+                from40to50++;
+            } else {
+                score /= 2;
+                invalid++;
+            }
+        }
+
+        double from0to9Share = 100.0 * from0to9 / n;
+        double from10to19Share = 100.0 * from10to19 / n;
+        double from20to29Share = 100.0 * from20to29 / n;
+        double from30to39Share = 100.0 * from30to39 / n;
+        double from40to50Share = 100.0 * from40to50 / n;
+        double invalidShare = 100.0 * invalid / n;
+
+        System.out.printf("%.2f%nFrom 0 to 9: %.2f%%%nFrom 10 to 19: %.2f%%%n" +
+                "From 20 to 29: %.2f%%%nFrom 30 to 39: %.2f%%%nFrom 40 to 50: %.2f%%%n" +
+                "Invalid numbers: %.2f%%", score, from0to9Share, from10to19Share, from20to29Share,
+                from30to39Share, from40to50Share, invalidShare);
+    }
+}
