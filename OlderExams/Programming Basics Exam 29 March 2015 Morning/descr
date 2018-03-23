@@ -1,0 +1,238 @@
+<h2 align="center">
+    Problem 1 – Torrent Pirate
+</h2>
+<p>
+    Captain Jack Sparrow is a famous pirate. He loves to steal different stuff
+    just for fun and he loves watching movies. He recently discovered a brand
+    new technology called peer-to-peer or torrent. After he browsed a famous
+    site, he made a <strong>collection of movies</strong> he would like to
+    download. Assume 1 movie has a size of<strong> 1500MB</strong>. Jack
+    doesn’t want to pay for the internet, so he decided to go to the mall and
+use the free Wi-Fi there. The Wi-Fi has a fixed speed of    <strong>2MB/s</strong>. Unfortunately for Jack, his wife will be going with
+    him to the mall and this means that the download would not be free at all.
+She likes to buy sandals and other useless stuff. You are given the    <strong>money </strong>his wife spends<strong> per hour </strong>at the
+    mall.
+</p>
+<p>
+Your task is to help Jack <strong>calculate </strong>whether it is    <strong> cheaper</strong> to go to the mall and download the movies or go
+    to the cinema to watch them. If the amount is the same, Jack still wants to
+    make his wife happy, so he goes to the mall.
+</p>
+<h3>
+    Input
+</h3>
+<p>
+    The input data should be read from the console. It consists of three input
+    values, each at a separate line:
+</p>
+<ul>
+    <li>
+        Download data <strong>d</strong>: how much <strong>megabytes</strong>
+        in total Jack should download.
+    </li>
+    <li>
+Price of cinema <strong>p</strong>: how much        <strong>money would cost</strong> Jack to go to the cinema to watch one
+        movie.
+    </li>
+    <li>
+Wife spending <strong>w</strong>: how much        <strong>money per hour</strong> does Jack’s wife spend.
+    </li>
+</ul>
+<p>
+    The input data will always be valid and in the format described. There is
+    no need to check it explicitly.
+</p>
+<h3>
+    Output
+</h3>
+<p>
+    · The output data must be printed on the console.
+</p>
+<p>
+· On the only output line you must print    <strong>“{place to go} -&gt; {price to pay}lv”</strong>.
+</p>
+<ul>
+    <li>
+        The <strong>price to pay</strong> should be formatted with 2 digits
+        after the decimal sign.
+    </li>
+</ul>
+<h3>
+    Constraints
+</h3>
+<ul type="disc">
+    <li>
+        <strong>d</strong>
+        is an integer number in range [0...2,147,483,647]. <strong>p</strong>
+        is an integer number in range [0…30]. <strong>w</strong> is an integer
+        number in range [0…200].
+    </li>
+    <li>
+        Allowed working time for your program: 0.25 seconds.
+    </li>
+    <li>
+        Allowed memory: 16 MB.
+    </li>
+</ul>
+<h3>
+    Examples
+</h3>
+<table cellspacing="0" cellpadding="0" border="1">
+    <tbody>
+        <tr>
+            <td valign="top" width="60">
+                <p align="center">
+                    <strong>Input</strong>
+                </p>
+            </td>
+            <td colspan="2" valign="top" width="166">
+                <p align="center">
+                    <strong>Output</strong>
+                </p>
+            </td>
+            <td colspan="3" valign="top" width="474">
+                <p align="center">
+                    <strong>Comments</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" width="60">
+                <p>
+                    30000
+                </p>
+                <p>
+                    5
+                </p>
+                <p>
+                    50
+                </p>
+            </td>
+            <td colspan="2" valign="top" width="166">
+                <p>
+                    cinema -&gt; 100.00lv
+                </p>
+            </td>
+            <td colspan="3" valign="top" width="474">
+                <p>
+                    <strong>Download time</strong>
+                    =
+                </p>
+                <p>
+=                    <em>(download data)/(fixed speed)/(seconds)/(minutes)</em>
+                    =
+                </p>
+                <p>
+                    = 30000 / 2 / 60 / 60 = <strong>4.1667</strong> hours in
+                    the mall
+                </p>
+                <p>
+                    <strong>Price for download</strong>
+                    = <em>(download time)*(wife spending)</em> =
+                </p>
+                <p>
+                    = 4.1667*50 = <strong>208.34</strong>lv
+                </p>
+                <p>
+                    <strong>Number of movies downloaded</strong>
+                    =
+                </p>
+                <p>
+= <em>(download data)/(movie size)</em> = 30000/1500 =                    <strong>20</strong> movies
+                </p>
+                <p>
+                    <strong>Cinema price</strong>
+                    =
+                </p>
+                <p>
+= <em>(number of movies)*(cinema price) </em>= 20*5lv =                    <strong>100</strong>lv
+                </p>
+                <p>
+                    Result on the console: <strong>cinema -&gt; 100lv</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top" width="121">
+                <p align="center">
+                    <strong>Input</strong>
+                </p>
+            </td>
+            <td colspan="2" valign="top" width="228">
+                <p align="center">
+                    <strong>Output</strong>
+                </p>
+            </td>
+            <td valign="top" width="121">
+                <p align="center">
+                    <strong>Input</strong>
+                </p>
+            </td>
+            <td valign="top" width="229">
+                <p align="center">
+                    <strong>Input</strong>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" valign="top" width="121">
+                <p>
+                    30000
+                </p>
+                <p>
+                    15
+                </p>
+                <p>
+                    50
+                </p>
+            </td>
+            <td colspan="2" valign="top" width="228">
+                <p>
+                    mall -&gt; 208.33lv
+                </p>
+            </td>
+            <td valign="top" width="121">
+                <p>
+                    30000
+                </p>
+                <p>
+                    15
+                </p>
+                <p>
+                    72
+                </p>
+            </td>
+            <td valign="top" width="229">
+                <p>
+                    30000
+                </p>
+                <p>
+                    15
+                </p>
+                <p>
+                    50
+                </p>
+            </td>
+        </tr>
+        <tr height="0">
+            <td width="60">
+                <br/>
+            </td>
+            <td width="62">
+                <br/>
+            </td>
+            <td width="104">
+                <br/>
+            </td>
+            <td width="125">
+                <br/>
+            </td>
+            <td width="121">
+                <br/>
+            </td>
+            <td width="229">
+                <br/>
+            </td>
+        </tr>
+    </tbody>
+</table>
